@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}">
+</head>
+<body style="background-color: #C8AD7F">
+    <!-- Menu bar -->
+    <nav class="bar">
+        <ul class="menu">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About Me</a></li>
+            <li><a href="{% url 'form' %}">Form</a></li>
+            <li><a href="{% url 'photo' %}">Photo Gallery</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </nav>
+
+    <h1>⯎Contact⯎</h1>
+    
+    <div>
+        <h3>Send me a message</h3>
+        <form id="contactForm" onsubmit="return validateContactForm()">
+            <input id="name" name="name" type="text" placeholder="Your Name" required>
+            <input id="email" name="email" type="email" placeholder="Your Email" required>
+            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+    
+    <div>
+        <h3>Contact Information</h3>
+        <p><strong>Email:</strong> damaris.daschevici@e-uvt.ro</p>
+        <p><strong>Phone:</strong> +0774953012</p>
+        <p><strong>Address:</strong> 144 Maresal Constantin Prezan, Timisoara, Romania</p>
+    </div>
+
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2748.030620921147!2d21.22580137681393!3d45.7226401710685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47456771722680af%3A0x4aaacbde95b640f5!2sBulevardul%20Mare%C8%99al%20Constantin%20Prezan%20144%2C%20Timi%C8%99oara%2C%20Romania!5e0!3m2!1sen!2sus!4v1711471234567!5m2!1sen!2sus"
+        width="600"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+    <br>
+    <footer><p>&copy; 2025 Damaris' - Blog</p></footer>
+
+    <script src="{% static 'js/contact.js' %}"></script>
+</body>
+</html>

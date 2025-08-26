@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Review</title>
+  <link rel="stylesheet" href="{% static 'css/delete_review.css' %}">
+</head>
+<body>
+
+  <div class="bar">
+    <h2>Delete Confirmation</h2>
+  </div>
+
+  <div class="titlu">
+    <h1>❀Delete Review❀</h1>
+  </div>
+
+  <div class="confirm-box">
+    <p>Are you sure you want to delete the review by {{ review.email }}?</p>
+    <form method="post">
+      {% csrf_token %}
+      <button type="submit">Delete</button>
+      <a href="{% url 'home' %}">Cancel</a>
+    </form>
+  </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+  <footer>
+    &copy; 2025 Damaris' - Blog
+  </footer>
+
+</body>
+</html>

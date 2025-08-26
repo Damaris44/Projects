@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Damaris] - About</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
+</head>
+<body style="background-color: #C8AD7F">
+
+<!-- Menu bar -->
+<nav class="bar">
+    <ul class="menu">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About Me</a></li>
+        <li><a href="{% url 'form' %}">Form</a></li>
+        <li><a href="{% url 'photo' %}">Photo Gallery</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+    </ul>
+</nav>
+
+<header>
+    <h1 align="center" class="h">⯎About me⯎</h1>
+    <br><br>
+    <img src="{% static 'images/me2.jpg' %}" alt="Damaris" width="400" height="400">
+    <br>
+    <p class="p">
+      Hello guys! I'm Damaris, a first year student majoring in computer science at West University of Timisoara. 
+     I'm deeply passionate about programming and webdesign and always looking to learn more. When I'm not hitting the books, you can find me taking long walks in the park or spending time with my friends at a coffeeshop. 
+     I love reading because it helps me escape reality. I also enjoy listening to music, and I’m always open to new experiences and meeting like-minded people!
+    </p>
+</header>
+
+<p class="p">
+    Another fact about me is that I'm the oldest sibling out of four so I'm a very responsible person. 
+    I can cook many dishes but the ones I cook the most are: pasta, lasagna, chicken with rice or mashed potatoes.
+    These are my favourite meals. My family is very important to me and without them I wouldn't be where I am today.
+</p>
+
+<div class="p">
+    <p>I would say that my biggest achievements until now are:</p>
+    <ul>
+        <li>Finishing high school (at "Iancu de Hunedoara")</li>
+        <li>Getting accepted into University in the field I wanted to study</li>
+        <li>Getting a computer science certificate</li>
+    </ul>
+</div>
+
+<br>
+<table style="width:100%;border:1px solid black;" border="1" class="p">
+    <tr>
+        <th>Education</th>
+        <th>Skills</th>
+        <th>Projects</th>
+    </tr>
+    <tr>
+        <td>Colegiul National "Iancu de Hunedoara"</td>
+        <td>learning fast</td>
+        <td>certificate in informatics</td>
+    </tr>
+    <tr>
+        <td>West University of Timisoara</td>
+        <td>empathetic</td>
+        <td>made a CV using HTML-CSS</td>
+    </tr>
+</table>
+
+<br><br>
+<footer><p>&copy; 2025 Damaris' - Blog</p></footer>
+
+</body>
+</html>

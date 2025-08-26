@@ -1,0 +1,43 @@
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #C8AD7F;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #6b3d12;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    #scrollToTopBtn {
+        bottom: 10px;
+        right: 10px;
+        padding: 8px;
+        font-size: 16px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    #scrollToTopBtn {
+        bottom: 5px;
+        right: 5px;
+        padding: 6px;
+        font-size: 14px;
+    }
+}

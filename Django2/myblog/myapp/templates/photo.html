@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Photo Gallery</title>
+    <!-- Add the static tag load at the beginning -->
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/photo.css' %}">
+</head>
+<body style="background-color: #C8AD7F">
+    <!-- Menu bar -->
+    <nav class="bar">
+        <ul class="menu">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About Me</a></li>
+            <li><a href="{% url 'form' %}">Form</a></li>
+            <li><a href="{% url 'photo' %}">Photo Gallery</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </nav>
+
+    <h1> ⯎ Photo Gallery ⯎ </h1>
+
+    <!-- Photo gallery -->
+    <div id="photo-gallery" class="gallery">
+        <div class="photo-item">
+            <img src="{% static 'images/me.jpg.jpg' %}" alt="Photo 1" height="300" width="300">
+        </div>
+        <div class="photo-item">
+            <img src="{% static 'images/productive.jpg' %}" alt="Photo 2" height="300" width="300">
+        </div>
+        <div class="photo-item">
+            <img src="{% static 'images/food.jpg' %}" alt="Photo 3" height="300" width="300">
+        </div>
+        <div class="photo-item">
+            <img src="{% static 'images/ai.jpg' %}" alt="Photo 4" height="300" width="300">
+        </div>
+        <div class="photo-item">
+            <img src="{% static 'images/book.jpg' %}" alt="Photo 5" height="300" width="300">
+        </div>
+        <div class="photo-item">
+            <img src="{% static 'images/me2.jpg' %}" alt="Photo 6" height="300" width="300">
+        </div>
+        <!-- Add more images as needed -->
+    </div>
+
+    <br>
+    <footer><p>&copy; 2025 Damaris' - Blog</p></footer>
+</body>
+</html>

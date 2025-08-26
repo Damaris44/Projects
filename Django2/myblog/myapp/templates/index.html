@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title> Damaris'- Blog </title>
+   {% load static %}
+   <link rel="stylesheet" href="{% static 'css/css.css' %}">
+  <link rel="stylesheet" href="{% static 'css/chatbot.css' %}">
+  <link rel="stylesheet" href="{% static 'css/index_BackToTop.css' %}">
+  <link rel="stylesheet" href="{% static 'css/index_SearchPosts.css' %}">
+  <script src="{% static 'js/chatbot.js' %}"></script>
+  <script src="{% static 'js/index_BackToTop.js' %}"></script>
+  <script src="{% static 'js/index_SearchPosts.js' %}"></script>
+</head>
+<body style="background-color: #C8AD7F">
+
+<!-- Menu bar -->
+<nav class="bar">
+    <ul class="menu">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About Me</a></li>
+        <li><a href="{% url 'form' %}">Form</a></li>
+        <li><a href="{% url 'photo' %}">Photo Gallery</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+    </ul>
+</nav>
+
+<header class="titlu"><h1 class="h"> ♡Welcome to Damaris' - Blog♡ </h1>
+    
+  </header>
+ 
+  <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top">Back to
+    Top </button>
+    <!-- search Div -->
+<div id="searchContainer">
+    <input type="text" id="searchInput" placeholder="Search...">
+    <button id="searchButton" onclick="searchPosts()">Search</button>
+    </div>
+
+    {% block content %}
+    {% for post in posts %}
+    <article>
+    <!-- Post 1: Welcome Post -->
+    <section id="post1" >
+    <h2 class="tit">{{ post.title }}</h2>
+    <p><strong>Posted on:</strong> {{ post.post_date }} <strong>by</strong> Damaris' - Blog</p>
+    <img src="{{ post.image.url }}" alt="Blog Welcome Image" width="300" height="400">
+    <p>{{ post.paragraph }}</p>
+</article>
+{% endfor %}
+  {% endblock %}
+
+
+
+</section>
+
+
+<div class="chatbot-wrapper">
+    <div class="chat-icon">♡</div>
+  
+    <div class="chat-container" id="chat-container">
+      <!-- Chat messages appear here -->
+    </div>
+  
+    <form id="chat-form">
+      <input type="text" id="user-input" placeholder="Ask me something..." required>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+  
+  
+  <section>
+    <h2>Reviews</h2>
+    <ul>
+    {% for review in reviews %}
+    <li>
+    <p><strong>{{ review.email }}</strong> ({{ review.date }})</p>
+    <p>Rating: {{ review.rating }}</p>
+    <p>{{ review.comment }}</p>
+    <a href="{% url 'update_review' review.id %}" class="btn-link">Update</a>
+    <a href="{% url 'delete_review' review.id %}"class="btn-link">Delete</a>
+    </li>
+    {% endfor %}
+    </ul>
+    <a href="{% url 'submit_review' %}"class="btn-link">Leave a Review</a>
+    </section>
+  
+  
+<br>
+<footer><p>&copy; 2025 Damaris' - Blog</p></footer>
+</body>
+</html>
+
+
+
+

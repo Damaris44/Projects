@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Review</title>
+    <link rel="stylesheet" href="{% static 'css/submit_review.css' %}">
+</head>
+<body>
+
+    <!-- Header Bar -->
+    <div class="bar">
+        <h2>Review Portal</h2>
+    </div>
+
+    <!-- Page Title -->
+    <div class="titlu">
+        <h1>❀Submit a Review❀</h1>
+    </div>
+
+    <!-- Form Section -->
+    <div class="form-container">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit Review</button>
+        </form>
+        <div style="text-align: center; margin-top: 15px;">
+            <a href="{% url 'home' %}" style="color: #4A3F35; text-decoration: underline;">Back to Home</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy;  2025 Damaris' - Blog
+    </footer>
+
+</body>
+</html>
