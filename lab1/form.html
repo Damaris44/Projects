@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form</title>
+    <link rel="stylesheet" type="text/css" href="../lab1/Css/form.css">
+</head>
+<body style="background-color: #C8AD7F">
+    <!-- Menu bar -->
+    <nav class="bar">
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="form.html">Form</a></li>
+            <li><a href="photo.html">Photo Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <h1 align="center" class="h"> ⯎Form⯎ </h1>
+    <h3 class="com">Be part of my team!</h3>
+
+    <form class="f" onsubmit="return validateForm()">
+        <p>
+            <label>Salutation
+                <select id="salutation" name="salutation">
+                    <option>--None--</option>
+                    <option>Mr.</option>
+                    <option>Ms.</option>
+                    <option>Mrs.</option>
+                    <option>Dr.</option>
+                    <option>Prof.</option>
+                </select>
+            </label>
+        </p>
+
+        <p><label>First name: <input id="firstName" name="firstName" type="text" /></label></p>
+        <p><label>Last name: <input id="lastName" name="lastName" type="text" /></label></p>
+
+        <p>Gender:
+            <label><input type="radio" id="male" name="gender" value="male" />Male</label>
+            <label><input type="radio" id="female" name="gender" value="female" />Female</label>
+        </p>
+
+        <p><label>Email: <input id="email" type="email" name="email" /></label></p>
+        <p><label>Date of Birth: <input type="date" name="birthDate" id="birthDate" /></label></p>
+        <p><label>Country: <input id="country" name="country" type="text" /></label></p>
+
+        <p><label>Address: <textarea id="address" name="address" cols="30" rows="3"></textarea></label></p>
+
+        <p>Interests:
+            <br>
+            <label><input type="checkbox" id="music" name="interest" value="music" />Music</label>
+            <label><input type="checkbox" id="reading" name="interest" value="reading" />Reading</label>
+            <label><input type="checkbox" id="games" name="interest" value="playing games" />Games</label>
+        </p>
+
+        <p>Communication Preferences:
+            <br>
+            <label><input type="checkbox" id="sms" name="preferance" value="sms" />SMS</label>
+            <label><input type="checkbox" id="call" name="preferance" value="call" />CALL</label>
+            <label><input type="checkbox" id="emailPref" name="preferance" value="e-mail" />E-MAIL</label>
+        </p>
+
+        <p>Profile Picture: <label><input type="file" id="profilePic" name="file" /></label></p>
+        <p>Upload CV (PDF only): <label><input type="file" id="cvFile" name="file" accept=".pdf" /></label></p>
+
+        <p><button type="submit">Submit</button></p>
+    </form>
+
+    <script src="../lab1/js/form.js"></script>
+</body>
+</html>
